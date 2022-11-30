@@ -1,0 +1,55 @@
+# Project: EXERCÍCIOS_E1-Lorenzo
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o exercicio1.o exercicio2.o exercicio3.o exercicio4.o exercicio5.o exercicio6.o exercicio7.o exercicio8.o exercicio9.o
+LINKOBJ  = main.o exercicio1.o exercicio2.o exercicio3.o exercicio4.o exercicio5.o exercicio6.o exercicio7.o exercicio8.o exercicio9.o
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = EXERCICIOS_E1-Lorenzo.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+exercicio1.o: exercicio1.c
+	$(CC) -c exercicio1.c -o exercicio1.o $(CFLAGS)
+
+exercicio2.o: exercicio2.c
+	$(CC) -c exercicio2.c -o exercicio2.o $(CFLAGS)
+
+exercicio3.o: exercicio3.c
+	$(CC) -c exercicio3.c -o exercicio3.o $(CFLAGS)
+
+exercicio4.o: exercicio4.c
+	$(CC) -c exercicio4.c -o exercicio4.o $(CFLAGS)
+
+exercicio5.o: exercicio5.c
+	$(CC) -c exercicio5.c -o exercicio5.o $(CFLAGS)
+
+exercicio6.o: exercicio6.c
+	$(CC) -c exercicio6.c -o exercicio6.o $(CFLAGS)
+
+exercicio7.o: exercicio7.c
+	$(CC) -c exercicio7.c -o exercicio7.o $(CFLAGS)
+
+exercicio8.o: exercicio8.c
+	$(CC) -c exercicio8.c -o exercicio8.o $(CFLAGS)
+
+exercicio9.o: exercicio9.c
+	$(CC) -c exercicio9.c -o exercicio9.o $(CFLAGS)
